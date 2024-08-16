@@ -1,7 +1,10 @@
 A Blog App made using MERN stack.
 GO and view,add Blogs to our community which we can use when learning.
 
-Website Url https://shema-blog-app.netlify.app/
+Website Url https://shema-blog-app.vercel.app/
+
+
+
 ![image](https://github.com/user-attachments/assets/8a496a7a-3590-4b08-b9dc-2d1c4df83dd5)
 
 
