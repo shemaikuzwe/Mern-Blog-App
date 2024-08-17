@@ -7,7 +7,7 @@ export default function BlogCard({blog}){
     const navigate = useNavigate();
 
    const  handleDelete= async (id)=>{
-       const response=await  axios.delete(`http://localhost:8000/api/blogs/${id}`)
+       const response=await  axios.delete(`https://mern-blog-app-2ha2.onrender.com/api/blogs/${id}`)
        const  status=await response.data;
        if (status){
            navigate(0)
