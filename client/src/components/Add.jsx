@@ -17,7 +17,7 @@ export default function Add(){
     const  handleOnSubmit=async (e)=>{
         e.preventDefault()
       try {
-          const  res=await  axios.post("http://localhost:8000/api/blogs",{
+          const  res=await  axios.post("https://mern-blog-app-2ha2.onrender.com/api/blogs",{
               title:formData.title,
               description:formData.description,
           })
