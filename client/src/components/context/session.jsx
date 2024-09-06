@@ -35,7 +35,7 @@ export default function SessionProvider({ children }) {
   useEffect(() => {
     getSession();
   }, []);
-  const clearSession = async () => {
+  const clearSession = () => {
     setSession({
         status: "unauthenticated",
         user: {},

@@ -10,18 +10,21 @@ import { FaTrashCan, FaPen } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useSession } from "./context/session";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 export default function BlogCard({ blog }) {
   const navigate = useNavigate();
   const[isDisabled,setIsDisabled]=useState(false)
    const {session}=useSession()
    const username=session?.user?.username;
-   if(!username){
-    setIsDisabled(true)
-   }
-   if(blog.username==username){
-    setIsDisabled(true)
-  }
+ 
+  useEffect(()=>{
+    if(!username){
+      setIsDisabled(true)
+     }
+     if(blog.username!==username){
+      setIsDisabled(true)
+    }
+  },[])
   const handleDelete = async (id) => {
    
     const response = await axios.delete(
@@ -40,7 +43,7 @@ export default function BlogCard({ blog }) {
       <Divider />
       <CardBody className="flex justify-between">
         <p className={"text-inherit"}>{blog.description}</p>
-        <p className=" "><i>By {blog.username}</i></p>
+        <p><i>By {blog.username}</i></p>
       </CardBody>
       <Divider />
       <CardFooter className={"flex gap-8 justify-center "}>

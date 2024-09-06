@@ -39,7 +39,7 @@ export default function Register({ onClose, onSwitch }) {
         }
       );
       if (res.status === 200) {
-        return onClose();
+        return window.location.reload()
       }
     } catch (e) {
       console.log(e);
