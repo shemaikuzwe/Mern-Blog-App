@@ -11,7 +11,7 @@ export default function Home() {
   const getBlogList = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:3000/api/blogs");
+      const res = await axios.get("https://mern-blog-app-2ha2.onrender.com/api/blogs");
       const data = await res.data;
       setBlogList(data);
       setLoading(false);
