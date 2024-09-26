@@ -28,7 +28,7 @@ export default function BlogCard({ blog }) {
   const handleDelete = async (id) => {
    
     const response = await axios.delete(
-      `http://localhost:3000/api/blogs/${id}`
+      `https://mern-blog-app-2ha2.onrender.com/api/blogs/${id}`
     );
     const status = await response.data;
     if (status) {
