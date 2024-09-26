@@ -26,7 +26,7 @@ export default function Add() {
     e.preventDefault();
     try {
       setIsLoading(true);
-      const res = await axios.post("http://localhost:3000/api/blogs", {
+      const res = await axios.post("https://mern-blog-app-2ha2.onrender.com/api/blogs", {
         title: formData.title,
         description: formData.description,
         username: formData.username,
