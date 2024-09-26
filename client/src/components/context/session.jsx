@@ -13,7 +13,7 @@ export default function SessionProvider({ children }) {
   const getSession = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:3000/auth/session", {
+      const res = await axios.get("https://mern-blog-app-2ha2.onrender.com/auth/session", {
         withCredentials: true,
       });
       if (res.status == 200) {
