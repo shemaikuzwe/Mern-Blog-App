@@ -14,7 +14,7 @@ export default function Edit() {
   const getBlog = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(`http://localhost:3000/api/blogs/${id}`);
+      const res = await axios.get(`https://mern-blog-app-2ha2.onrender.com/api/blogs/${id}`);
       const data = res.data;
       if (data) {
         setFormData({
@@ -35,7 +35,7 @@ export default function Edit() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.put(`http://localhost:3000/api/blogs/${id}`, {
+    const res = await axios.put(`https://mern-blog-app-2ha2.onrender.com/api/blogs/${id}`, {
       title: formData.title,
       description: formData.description,
       username: user?.username,
